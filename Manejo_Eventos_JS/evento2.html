@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <h1>Eventos con addEventListener</h1>
+
+   
+    <!-- Evento 1: Onclick -->
+    <h3>Evento 1: Onclick</h3>
+    <!-- Botón que activará el evento onclick -->
+    <button id="btnSaludar">Saludar</button>
+
+    <!-- Evento 2: Onchange -->
+    <h3>Evento 2: Onchange</h3>
+    <!-- Selecionamos  para elegir un color -->
+    <select id="selectorColor">
+        <option value="">Selecciona un color</option>
+        <option value="rojo">rojo</option>
+        <option value="azul">azul</option>
+        <option value="verde">verde</option>
+      </select>
+
+    <!-- Evento 3: Onmouseover -->
+    <h3>Evento 3: Onmouseover</h3>
+    <!-- Div que cambia cuando pasemos el ratón por encima -->
+    <div id="miDiv">
+      Pasa el ratón por aquí
+    </div>
+
+    <!-- Evento 4: onkeydown / onkeyup -->
+    <h3>Evento 4: onkeydown / onkeyup</h3>
+    <!-- Campo de texto -->
+    <input type="text" id="inputTeclado" placeholder="Escribe algo aquí" />
+
+    <!-- Evento 5: onload -->
+    <h3>Evento 5: onload</h3>
+    <!-- Al recargar la página, se disparará el evento onload -->
+    <label>Se recargar la página, mirar la consola</label>
+
+    <!-- Evento 6: onfocus / onblur -->
+    <h3>Evento 6: onfocus / onblur</h3>
+    <!-- Campo de texto que cuando hace cilck el inptu se enfoca y desenfoca -->
+    <input id="inputCampo" type="text" placeholder="enfoca este campo" />
+
+    <!-- Evento 7: onresize -->
+    <h3>Evento 7: onresize</h3>
+    <!-- Mostramos un mensaje para mirar la consola al cambiar el tamaño de la ventana -->
+    <h2>mirar la consola</h2>
+
+
+
+    <script>
+      // Seleccionamos el botón por su ID
+      const boton = document.getElementById("btnSaludar");
+
+      // Le agregamos un "escuchador" de eventos para el clic
+      boton.addEventListener("click", function saludar() {
+        alert("Hola, ¿cómo estás?");
+      });
+
+
+      // Obtenemos el select por su ID
+  const selector = document.getElementById("selectorColor");
+
+// Usamos addEventListener para escuchar el evento "change"
+selector.addEventListener("change", function () {
+  const valor = selector.value;
+  alert("Has seleccionado el color: " + valor);
+});
+  
+
+ // Seleccionamos el div por su ID
+ const div = document.getElementById("miDiv");
+
+// Evento cuando el ratón entra al div
+div.addEventListener("mouseover", function () {
+  console.log("dentro del div");
+ 
+});
+
+// Evento cuando el ratón sale del div
+div.addEventListener("mouseout", function () {
+  console.log("fuera del div");
+
+});
+
+
+const input = document.getElementById("inputTeclado");
+//evento que dectacta cuando una tecla es presionada 
+input.addEventListener("keydown", function (event) {
+  console.log("Tecla presionada:", event.key);
+});
+
+// Evento cuando una tecla se SUELTA
+input.addEventListener("keyup", function (event) {
+  console.log("Tecla liberada:", event.key);
+});
+
+window.addEventListener("load", function () {
+      console.log("La página se ha cargado ");
+    });
+
+ // Para el evento onfocus
+ const campoTexto = document.getElementById('inputCampo');
+  campoTexto.addEventListener('focus', function() {
+    console.log("El campo ha sido enfocado");
+  });
+
+  // Para el evento onblur
+  campoTexto.addEventListener('blur', function() {
+    console.log("El campo ha sido desenfocado");
+  });
+
+
+ // Para el evento onresize
+ window.addEventListener('resize', function() {
+    console.log(window.innerWidth + "x" + window.innerHeight);
+  });
+ 
+   
+
+    </script>
+  </body>
+</html>

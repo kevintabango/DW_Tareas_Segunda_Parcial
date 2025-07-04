@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+ <!--titulo del documento-->
+  <title>Calculadora Simple</title>
+  <!--link para llamar a los estilos css-->
+<link rel="stylesheet" href="style3.css">
+ 
+</head>
+<body>
+  <!--asignamos un id al formulario-->
+  <form id="miCalculadora">
+    <!---asignamos una calse llamada calculadora-->
+    <div class="calculadora">
+      <!-- Título de la calculadora -->
+      <h1>Calculadora Simple</h1>
+<!--colocamos un input y asignamos un id llamado num1-->
+      <input type="number" id="num1" value="0">
+      <!--colocamos otro input y asignamos un id llamado num2-->
+      <input type="number" id="num2" value="0">
+<!--utilizamos un slect para mostrar las opciones-->
+<!--asignamos un id llamado operacion-->
+      <select id="operacion">
+        <!---ponemos una opcion de sumar-->
+        <option value="sumar">Suma (+)</option>
+        <!--otra opcion de restar-->
+        <option value="restar">Resta (-)</option>
+         <!--otra opcion de multiplicar-->
+        <option value="multiplicar">Multiplicación (×)</option>
+         <!--otra opcion de dividir-->
+        <option value="dividir">División (÷)</option>
+      </select>
+<!--colocamos un div  le asignamos un clase y id para mostrar el resultado-->
+      <div class="resultado" id="resultado">0</div>
+    </div>
+  </form>
+
+
+<!--link para llamar a las funciones de js-->
+  <script src="funciones.js"></script>
+</body>
+</html>

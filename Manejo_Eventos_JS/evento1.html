@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuentra el número ganador</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h1>Encuentra el número ganador</h1>
+    <table>
+        <tr>
+            <td><button class="boton" >1</button></td>
+            <td><button class="boton">2</button></td>
+            <td><button class="boton">3</button></td>
+        </tr>
+        <tr>
+            <td><button class="boton">4</button></td>
+            <td><button class="boton">5</button></td>
+            <td><button class="boton">6</button></td>
+        </tr>
+        <tr>
+            <td><button class="boton">7</button></td>
+            <td><button class="boton">8</button></td>
+            <td><button class="boton">9</button></td>
+        </tr>
+    </table>
+    <div class="mensaje">Presiona un botón...</div>
+    <script >
+        
+// Generar un número aleatorio entre 1 y 9
+let numAleatorio = Math.floor(Math.random() * 9) + 1;
+
+// Función que se ejecuta cuando se hace clic en un botón
+function verificarBoton(event) {
+  const boton = event.target;
+  const numeroClickeado = parseInt(boton.textContent);
+
+  // verificamos el  numero clickeado con el número aleatorio
+  if (numeroClickeado === numAleatorio) {
+    document.querySelector('.mensaje').textContent = "¡Número ganador!";
+    boton.style.backgroundColor = "green";  // Cambiar el fondo a verde si es correcto
+      boton.style.color = "white";  // Asegurarse de que el texto se vea bien
+    } else {
+      document.querySelector('.mensaje').textContent = "Número incorrecto";
+      boton.style.backgroundColor = "red";  // Cambiar el fondo a rojo si es incorrecto
+      boton.style.color = "white";  // Asegurarse de que el texto se vea bien
+    }
+  // deshabilitamos el  boton clickeado
+  boton.disabled = true;
+   
+
+};
+
+
+// Función para reiniciar el juego
+function reiniciarJuego() {
+    // Reiniciamos  el número aleatorio
+ numAleatorio = Math.floor(Math.random() * 9) + 1; // Nuevo número secreto
+    // Reiniciamos el mensaje
+  document.querySelector('.mensaje').textContent = 'Presiona un botón...';  
+
+  // Habilitar todos los botones
+  const botones = document.querySelectorAll('.boton');
+  botones.forEach(boton => boton.disabled = false);
+}
+
+// Asignar el evento a cada botón al cargar la página
+window.onload = function() {
+  const botones = document.querySelectorAll('.boton');
+  // mostramos un alert cuando recargamos la página
+  // y se genera un número aleatorio
+  alert('se genero numero  entre 1 y 9.'); // Mensaje de bienvenida
+  // llamamos a la funcion verificarBoton
+  botones.forEach(boton => {
+    boton.addEventListener('click', verificarBoton);  // Asignar la función al evento click
+
+  });
+
+  // Asignar el evento para reiniciar el juego
+  document.getElementById('reiniciar').addEventListener('click', reiniciarJuego);
+ 
+};
+    </script>
+</body>
+</html>

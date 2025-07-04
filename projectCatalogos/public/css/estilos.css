@@ -1,0 +1,138 @@
+/* SELECTOR UNIVERSAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Cuerpo de la pagina */
+  
+  /* SELECTOR DE TIPO */
+  body {
+  /* tipo de letra*/
+    font-family: 'Segoe UI', Tahoma;
+    /*/ color de fondo */
+    background-color: #f0f4f8;
+    /* color de texto */
+    color: #0f0f0f;
+    /* altura */
+    line-height: 1.6;
+  
+  
+  }
+    /* Inicio del encabezado */
+  
+  /* SELECTOR DE ID */
+  #main-header {
+    background-color: #004080;
+    color: white;
+    padding: 20px;
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;    
+  }
+  /* SELECTOR DE CLASE*/
+  /* logo de la pagina (PUCE)*/
+  .logo {
+    font-size: 2em;
+      font-weight: bold;
+      margin-left: 20px; 
+  }
+  /* SELECTOR DESCENDENTE */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  /*SELECTOR DE CLASE*/
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    
+  }
+  /* Fin del encabezado*/
+  
+  
+
+  /* SELCTOR  DESCENDENTE */
+  .hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  /* SELECTOR DESCENDENTE */
+  .hero-content h2 {
+    font-weight: normal;
+  }
+  
+  /* SELECTOR DE TIPO */
+  main {
+    padding: 40px 20px;
+  }
+  /* SELECTOR DE CLASE */
+  .seccion-principal, .seccion-secundaria, .seccion-terciaria {
+    background-color: rgb(192, 187, 187);
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* SELECTOR DE TIPO */
+  p {
+    margin-bottom: 15px;
+  }
+  
+  /* SELECTOR DE CLASE*/
+  .resaltado {
+    color: #c62828;
+    font-weight: bold;
+  }
+  
+  /* SELECTOR DESCENDENTE */
+  article p {
+    color: #1565c0;
+    font-style: italic;
+  }
+  
+  /* SELECTOR ID , CONTENEDOR ESPECIFICO */
+  #contenedor {
+    /* borde*/
+    border: 2px solid #2196f3;
+    /* espacio*/
+      padding: 5px;
+      /* borde redondo*/
+    border-radius: 8px;
+      /* color fondo*/
+    background-color: #e3f2fd;
+  }
+  
+  /* SELECTOR HIJO DIRECTO*/
+  ul > li {
+    margin-left: 20px;
+    padding: 5px;
+  }
+  
+  /* Inicio del footer*/
+  
+  /*SELECTOR DE CLASE */
+  .footer {
+    /* color de fondo */
+    background-color: #004080;
+    /* color texto */
+    color: white;
+    /* texto centrado */
+    text-align: center;
+    /* espaciado*/
+    padding: 30px;
+    /* borde */
+    border-top: 4px solid #00bcd4;
+  }
+  /* SELECTOR DESCENDENTE */
+  .footer span {
+    font-weight: bold;
+    color: #00bcd4;
+  }
+  
+  /* Fin del footer*/

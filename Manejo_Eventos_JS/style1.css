@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+ 
+}
+h1 {
+    font-size: 2em;
+
+}
+table {
+    border-collapse: separate;
+    border-spacing: 15px;
+    margin-bottom: 20px;
+
+
+}
+td {
+    padding: 0;
+}
+button {
+    width: 100px;
+    height: 70px;
+    font-size: 1.5em;
+    background: #74d9e0;
+    border: 2px solid #025a47;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.mensaje {
+    width: 290px;
+    height: 40px;
+
+    border: 1px solid #ccc;
+    font-size: 1.1em;
+ 
+    display: flex;
+
+justify-content: center;
+  
+}
