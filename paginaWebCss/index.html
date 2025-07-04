@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- titulo de la pagina-->
+    <title>  Página Web</title>
+    <!-- enlaces a los archivos css y js -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="funciones.js"></script>
+</head>
+
+<body>
+  <!-- header de la pagina -->
+    <header id="main-header"> <div class="logo">Puce</div>
+      <!-- barra de navegacion -->
+        <nav>
+            <ul>
+              <!-- enlaces de la barra de navegacion-->
+                <li><a href="#" class="nav-link">Inicio</a></li>
+                <!-- enlace de servicios -->
+                <li><a href="#" class="nav-link">Servicios</a></li>
+                <!--enlace de nosotros-->
+                <li><a href="#" class="nav-link">nosotros</a></li>
+                <!-- enlace de contacto -->
+                <li><a href="#" class="nav-link ">Contacto</a></li> </ul>
+        </nav>
+    </header>
+    <!-- seccion hero de la pagina -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- titulo de la pagina -->
+            <h1><span class="">Bienvenido a Desarrollo Web</span></h1>
+            <!-- subtitulo de la pagina -->
+            <h2> Selectores Css</h2>
+        </div>
+    </section>
+
+    <main>
+      <!-- primea seccion  de selectores tipo y clase -->
+        <section class="seccion-principal">
+          <!--h2 para -->
+            <h2>Selectores de Tipo y Clase</h2>
+
+            <!-- parrafos con ejemplos de selectores -->
+            <p>Selector de tipo: Aplica estilos a todos los elementos HTML del mismo tipo, por ejemplo p, h1, ul.
+              Ejemplo: p { color: blue; } — Estilo para todos los párrafos.  .</p>
+<!-- parrafo con ejemplo de selector clase-->
+            <p >  Selector de clase: Aplica estilos a los elementos que tienen una clase específica (precedida por un punto).
+              
+              Ejemplo: .resaltado { font-weight: bold; } — Afecta solo a los elementos con class="resaltado"</p>
+            <article>
+                <h3>Selector Descendente</h3>
+                <!-- parrafo con ejemplo de selector descendente -->
+                <p>Aplica estilos a los elementos anidados dentro de otro, sin importar cuántos niveles de profundidad haya.
+
+                  Ejemplo: article p { color: green; } — Estilo solo para los p dentro de article..</p>
+              
+            </article>
+        </section>
+<!-- segunda seccion de selectores id y hijos -->
+        <section class="seccion-secundaria">
+            <h2>Selectores de ID y Hijos Directos</h2>
+            <p>Los selectores de ID se utilizan para aplicar estilos a un único elemento con un ID específico.</p>
+            <p>Ejemplo: #contenedor { background-color: yellow; } — Afecta solo al elemento con id="contenedor-destacado".</p>
+           <!-- ejemplo usando contenedor con selector id -->
+            <div id="contenedor">
+                <h3>Selector de ID</h3>
+                <p> contenedor con  selector ID</p>
+              
+            </div>
+            <div class="hijos-directos">
+                <h3>Selector de Hijos Directos</h3>
+                <!-- parrafo con ejemplo de selector hijos directos -->
+                <p>Aplica estilos solo a los elementos que son hijos directos de un elemento específico.</p>
+                <p>Ejemplo: div > p { color: red; } — Afecta solo a los párrafos que son hijos directos de un div.</p>
+            </div>
+              
+        </section>
+<!-- tercera seccion de pseudoclases y pseudoelementos -->
+        <section class="seccion-terciaria">
+          <!---->
+            <h2>Pseudoclases y Pseudoelementos</h2>
+            <!-- parrafos con ejemplos de pseudoclases y pseudoelementos -->
+            <p>
+              Pseudoclase: Permite aplicar estilos según el estado del elemento.
+
+              Ejemplo: a:hover { color: red; } — Cambia el color al pasar el mouse.
+              <!-- ejemplo de pseudoclase -->
+             
+            
+            </p>
+    <!-- parrafos con ejemplos de pseudoclases y pseudoelementos -->
+            <p>
+              Pseudoelemento: Permite aplicar estilos a una parte específica del elemento.
+
+              Ejemplo: p::first-line { font-weight: bold; } — Aplica estilo solo a la primera línea del párrafo.
+           
+                Esta es una oración muy larga que sirve para mostrar cómo se aplica un estilo solo a la primera línea del texto usando pseudoelementos.
+              </p>
+              
+        </section>
+    </main>
+    <!-- footer de la pagina -->
+<section class="footer">
+        <h2><span >Puce</span> 2025</h2>
+        <!-- derechos reservados -->
+        <p> todos los derechos reservados Kevin Tabango 2025.</p>
+    </section>
+    <!-- fin del footer -->
+</body>
+</html>
